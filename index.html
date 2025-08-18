@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============ Preloader ============ -->
+    <div id="preloader">
+      <img src="assets/preloader.gif" alt="Loading..." />
+    </div>
+
+    <!-- ============ Header / Navbar ============ -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#" class="logo">Pato</a>
+        <nav id="nav-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#stats">Stats</a>
+          <a href="#reservation">Reservation</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <!-- ============ Hero ============ -->
+    <section id="hero" class="hero">
+      <div class="hero-slides">
+        <div
+          class="slide active"
+          style="background-image: url('assets/hero.jpg')"
+        >
+          <div class="overlay"></div>
+          <div class="hero-content reveal">
+            <h1 class="hero-title">Welcome to Pato</h1>
+            <p class="hero-subtitle">Experience Fine Dining</p>
+            <a href="#reservation" class="btn btn-primary">Book a Table</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/hero2.jpg')">
+          <div class="overlay"></div>
+          <div class="hero-content reveal">
+            <h1 class="hero-title">Taste the Difference</h1>
+            <p class="hero-subtitle">Where Food Meets Art</p>
+            <a href="#menu" class="btn btn-outline">Explore Menu</a>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/hero3.jpg')">
+          <div class="overlay"></div>
+          <div class="hero-content reveal">
+            <h1 class="hero-title">Unforgettable Moments</h1>
+            <p class="hero-subtitle">Celebrate With Us</p>
+            <a href="#contact" class="btn btn-primary">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-arrows">
+        <button class="arrow left" id="prev" aria-label="Previous slide">
+          ‹
+        </button>
+        <button class="arrow right" id="next" aria-label="Next slide">›</button>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section id="about" class="about section">
+      <div class="container about-grid">
+        <div class="about-img reveal">
+          <img src="assets/images/about.jpg" alt="About Pato" />
+        </div>
+        <div class="about-text reveal">
+          <h2 class="section-title">About Us</h2>
+          <p>
+            Founded with passion for gastronomy, Pato blends classic techniques
+            with modern flavors. Our chefs curate seasonal menus, locally
+            sourced and expertly crafted.
+          </p>
+          <p>
+            Join us for an unforgettable dining experience—perfect for dates,
+            family gatherings, and celebrations.
+          </p>
+          <a href="#reservation" class="btn btn-primary">Reserve Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Stats / Parallax Counters ============ -->
+    <section id="stats" class="stats parallax">
+      <div class="overlay overlay-strong"></div>
+      <div class="container stats-grid">
+        <div class="stat reveal">
+          <div class="stat-number" data-target="25">0</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-number" data-target="120">0</div>
+          <div class="stat-label">Signature Dishes</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Expert Staff</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-number" data-target="10000">0</div>
+          <div class="stat-label">Happy Guests</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Menu (Filterable) ============ -->
+    <section id="menu" class="menu section">
+      <div class="container">
+        <h2 class="section-title">Our Menu</h2>
+
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="lunch">Lunch</button>
+          <button class="filter-btn" data-filter="dinner">Dinner</button>
+          <button class="filter-btn" data-filter="drinks">Drinks</button>
+          <button class="filter-btn" data-filter="dessert">Dessert</button>
+        </div>
+
+        <div class="menu-grid">
+          <!-- Item -->
+          <article class="menu-item reveal" data-cat="lunch">
+            <div class="menu-item-head">
+              <h3>Grilled Salmon</h3>
+              <span class="price">$18</span>
+            </div>
+            <p>Lemon butter, seasonal veggies.</p>
+          </article>
+
+          <article class="menu-item reveal" data-cat="dinner">
+            <div class="menu-item-head">
+              <h3>Prime Ribeye</h3>
+              <span class="price">$28</span>
+            </div>
+            <p>Herb crust, jus, truffle mash.</p>
+          </article>
+
+          <article class="menu-item reveal" data-cat="drinks">
+            <div class="menu-item-head">
+              <h3>Classic Mojito</h3>
+              <span class="price">$8</span>
+            </div>
+            <p>Mint, lime, soda, cane sugar.</p>
+          </article>
+
+          <article class="menu-item reveal" data-cat="dessert">
+            <div class="menu-item-head">
+              <h3>Chocolate Lava Cake</h3>
+              <span class="price">$10</span>
+            </div>
+            <p>Vanilla ice cream, cocoa dust.</p>
+          </article>
+
+          <article class="menu-item reveal" data-cat="lunch">
+            <div class="menu-item-head">
+              <h3>Pesto Pasta</h3>
+              <span class="price">$14</span>
+            </div>
+            <p>Fresh basil, parmesan, pine nuts.</p>
+          </article>
+
+          <article class="menu-item reveal" data-cat="dinner">
+            <div class="menu-item-head">
+              <h3>Roasted Duck</h3>
+              <span class="price">$26</span>
+            </div>
+            <p>Orange glaze, wild rice.</p>
+          </article>
+
+          <article class="menu-item reveal" data-cat="drinks">
+            <div class="menu-item-head">
+              <h3>Cold Brew</h3>
+              <span class="price">$5</span>
+            </div>
+            <p>Slow-steeped, smooth & bold.</p>
+          </article>
+
+          <article class="menu-item reveal" data-cat="dessert">
+            <div class="menu-item-head">
+              <h3>Crème Brûlée</h3>
+              <span class="price">$9</span>
+            </div>
+            <p>Caramelized sugar, silky custard.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Reservation ============ -->
+    <section id="reservation" class="reservation section">
+      <div class="container">
+        <h2 class="section-title">Make a Reservation</h2>
+        <form id="reservation-form" class="reservation-form reveal" novalidate>
+          <div class="form-grid">
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="date" id="date" required />
+            <input type="time" id="time" required />
+            <input
+              type="number"
+              id="people"
+              min="1"
+              max="20"
+              placeholder="People"
+              required
+            />
+            <button type="submit" class="btn btn-primary full">
+              Reserve Now
+            </button>
+          </div>
+          <p
+            class="form-msg"
+            id="form-msg"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ Testimonials ============ -->
+    <section id="testimonials" class="testimonials section parallax">
+      <div class="overlay"></div>
+      <div class="container">
+        <h2 class="section-title light">What Our Guests Say</h2>
+
+        <div class="testimonial-slider reveal" id="testimonial-slider">
+          <div class="t-slide active">
+            <div class="t-avatar">
+              <img src="assets/images/testimonial1.jpg" alt="Guest 1" />
+            </div>
+            <blockquote>
+              “Absolutely delightful. The ambiance and flavors were spot on!”
+            </blockquote>
+            <div class="t-name">Aisha K.</div>
+          </div>
+          <div class="t-slide">
+            <div class="t-avatar">
+              <img src="assets/images/testimonial2.jpg" alt="Guest 2" />
+            </div>
+            <blockquote>
+              “Top-notch service and a menu I can’t stop thinking about.”
+            </blockquote>
+            <div class="t-name">Rahim S.</div>
+          </div>
+          <div class="t-slide">
+            <div class="t-avatar">
+              <img src="assets/images/testimonial3.jpg" alt="Guest 3" />
+            </div>
+            <blockquote>
+              “A perfect evening. We’re definitely coming back!”
+            </blockquote>
+            <div class="t-name">Nadia T.</div>
+          </div>
+        </div>
+
+        <div class="t-arrows">
+          <button
+            class="arrow left"
+            id="t-prev"
+            aria-label="Previous testimonial"
+          >
+            ‹
+          </button>
+          <button class="arrow right" id="t-next" aria-label="Next testimonial">
+            ›
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Gallery ============ -->
+    <section id="gallery" class="gallery section">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid">
+          <img
+            class="g-img reveal"
+            src="assets/images/gallery1.jpg"
+            alt="Gallery 1"
+          />
+          <img
+            class="g-img reveal"
+            src="assets/images/gallery2.jpg"
+            alt="Gallery 2"
+          />
+          <img
+            class="g-img reveal"
+            src="assets/images/gallery3.jpg"
+            alt="Gallery 3"
+          />
+          <img
+            class="g-img reveal"
+            src="assets/images/gallery4.jpg"
+            alt="Gallery 4"
+          />
+          <img
+            class="g-img reveal"
+            src="assets/images/gallery5.jpg"
+            alt="Gallery 5"
+          />
+          <img
+            class="g-img reveal"
+            src="assets/images/gallery6.jpg"
+            alt="Gallery 6"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+        ×
+      </button>
+      <img id="lightbox-img" src="" alt="Expanded image" />
+    </div>
+
+    <!-- ============ Contact ============ -->
+    <section id="contact" class="contact section parallax">
+      <div class="overlay overlay-strong"></div>
+      <div class="container contact-inner reveal">
+        <h2 class="section-title light">Contact Us</h2>
+        <p class="contact-info">
+          Email: contact@pato.com &nbsp; | &nbsp; Phone: +123 456 789
+        </p>
+        <p class="contact-info">123 Food Street, Flavor Town</p>
+        <a href="#reservation" class="btn btn-outline">Book a Table</a>
+      </div>
+    </section>
+
+    <!-- ============ Footer ============ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Pato Restaurant — All Rights Reserved</p>
+        <a
+          href="#hero"
+          id="backToTop"
+          class="back-to-top"
+          aria-label="Back to top"
+          >↑</a
+        >
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
